@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Five algorithms easy to understand that you probably don't know</title>
+    <meta name="description" content="Linear time sorting, MapReduce, centroid klustering, cryptographic hashes, proof of work.">
+    <meta name="author" content="Salvador de la Puente González">
+
+    <link rel="stylesheet" href="../lib/tabzilla/css/tabzilla.css"/>
+    <link rel="stylesheet" href="../lib/reveal/css/reveal.css"/>
+    <link rel="stylesheet" href="../lib/reveal/css/theme/mozilla-devrel-dark.css"/>
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="../lib/reveal/lib/css/solarized-light.css" />
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? '../lib/reveal/css/print/pdf.css' : '../lib/reveal/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+      
+
+    <div class="reveal">
+      <div class="slides">
+        <section>
+
+          <img style="height: 400px; border:none;background:none;" alt="" src="imgs/parrotscribe.png" />            
+          <header>
+            <h1>ParrotScribe</h1>
+          </header>
+        </section>
+        
+        <!-- Into  -->
+        <section>
+          <h2>Callum Donnelly</h2>
+          <dl style="padding-top: 10px;">
+            <dt>me</dt>
+            <dd>
+              <li>CEO and co-founder of Parrotscribe</li>
+              <li>former corporate development officer of the Ludgate Hub in Skibbereen</li>              
+              <li>founder and co-organiser of National digital week, attracting 1600 people in Skibbereen</li>
+              <li>graduated in Government Public Policy from UCC</li>
+            </dd>
+            <dt>twitter</dt>
+            <dd><a href="https://twitter.com/callumd264">@callumd264</a></dd>
+          </dl>
+        </section>
+        <section>
+          <h2>Ebad Ali</h2>
+          <dl style="padding-top: 60px;">
+            <dt>me</dt>
+            <dd>
+                 <li>CTO and co-founder of Parrotscribe</li>
+                 <li>responsible for Parrotscribe's technology strategy, infrastructure and vision</li>
+                 <li>co-founded <a href="slashux.io">SlashUx.io</a></i>
+                 <li>CS graduate who is an Engineer by heart</li>
+            </dd>
+            <dt>twitter</dt>
+            <dd><a href="https://twitter.com/ebadalie">@ebadalie</a></dd>
+          </dl>
+        </section>
+
+        <section>
+          <section>
+            <h2>What is Parrotscribe</h2>
+          </section>
+
+          <section>
+            <p>The  ParrotScribe platform allows companies to leverage artificial intelligence to gain valuable data from audio based communication to enhance  <strong>compliance</strong> and <strong>customer satisfaction.</strong></p>
+          </section>
+
+          <section>
+            <p>Key Market Opportunities</p>
+          </section>
+
+          <section>
+              <p>Reguation & Compliance</p>
+          </section>
+
+          <section>
+              <p>Privacy</p>
+          </section>
+
+          <section>
+              <p>Customer Insight</p>
+          </section>
+
+          <!-- <section>
+            <p>Cryptographic hash functions has lots of uses:</p>
+            <ul>
+              <li class="fragment">Verify message <strong>integrity</strong>.</li>
+              <li class="fragment">Verify password <strong>without transmitting them</strong>.</li>
+              <li class="fragment"><strong>Unequivocal</strong> identifications of files.</li>
+              <li class="fragment"><strong>Pseudorandomly</strong> number generation.</li>
+              <li class="fragment">Key <strong>derivation</strong>.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Of interest:</h3>
+            <p><a href="http://en.wikipedia.org/wiki/List_of_hash_functions#Cryptographic_hash_functions">List of cryptographic hash functions</a> at Wikipedia.</p>
+            <p>Git uses <a src="http://en.wikipedia.org/wiki/SHA-1">SHA1</a> hash function to check if a folder or file has changed.</p>
+            <p>There are mechanisms to attack hash functions such as that allowing to forge<a href="http://eprint.iacr.org/2005/067.pdf">a couple of X.509 certificates with the same signature</a>.</p>
+          </section> -->
+        </section>
+
+        <section>
+          <section>
+            <h2>How it works ?</h2>
+          </section>
+
+          <section>
+           <p>System Overview</p>          
+           <!--We will go through the whole system ,where we will look at the components, responsibilites of components and system architecture -->
+           
+           <!-- 1. A loosely coupled modular architecture. It is NOT a true microservice architecture -->
+           <!-- 2. Each of the services owns a single responsibility -->
+           <p class="fragment"><img src="imgs/Diagram.svg" alt="imgs/Diagram.png" /></p>           
+           <!-- <p class="fragment">It is a system to <strong>verify if a protocol actor has spent some time performing an action</strong>.</p> -->
+           <!-- <svg width="300px" height="300px" 
+              xmlns="imgs/Diagram.svg">
+           </svg> -->
+       
+          </section>
+
+          <section>
+            <p>Interface and Load Balancer</p>
+            <img style="background-color: white;" src="imgs/interface_loadbalancer.png" />
+          </section>          
+          <section>
+            <p>Services and DataStore</p>
+            <img style="background-color: white;" src="imgs/services_datastore.png" />
+          </section>
+          
+          <section>
+            <p>Message Broker and Compute Workers</p>
+            <img style="background-color: white;"src="imgs/broker_compute_thirdparty.png" />
+          </section>
+  
+        </section>
+
+        <section>
+          <section>
+            <h2>Demo</h2>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Thank you</h2>
+          </section>
+        </section>
+
+      </div>
+
+    </div>
+
+    <script src="../lib/reveal/lib/js/head.min.js"></script>
+    <script src="../lib/reveal/js/reveal.js"></script>
+
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        history: true,
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          { src: '../lib/reveal/plugin/markdown/marked.js' },
+          { src: '../lib/reveal/plugin/markdown/markdown.js' },
+          { src: '../lib/reveal/plugin/notes/notes.js', async: true },
+          { src: '../lib/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+  </body>
+</html>
